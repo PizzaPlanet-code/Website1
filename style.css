@@ -1,0 +1,237 @@
+/* =========================
+   Base Styles (Desktop First)
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f5f2;
+    colour: black;
+}
+
+/* =========================
+   Header
+========================= */
+
+.header-container {
+    background-color: linear-gradient(to right, #f4b400, #4b0082);
+    color: white;
+    display: flex;
+    flex-direction: column;   /* This stacks items vertically */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.logo {
+    width: 100%;   /* adjust size if needed */
+    height: auto;
+}
+
+.subheading {
+    color: #f8f5f2y;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+
+/* =========================
+   Navigation
+========================= */
+
+nav {
+    background-color: #f8f5f2 ;
+    padding: 15px;
+    text-align: center;
+    color: black;
+}
+
+nav a {
+    color: #f8f5f2y;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   Sections
+========================= */
+
+section {
+    padding: 40px 20px;
+}
+
+h2 {
+    color: #6a0dad;
+    text-align: center;
+}
+
+/*=========================
+  new items
+==========================*/
+
+.video-banner {
+    width: 100%;
+    height: 400px;        /* controls banner height */
+    overflow: hidden;     /* prevents scrollbars */
+    position: relative;
+}
+
+#newitems {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* VERY IMPORTANT */
+}
+
+
+
+/* =========================
+   Menu Cards
+========================= */
+
+.menu-container {
+    display: flex;
+    flex-direction: column;  /* stacks items vertically */
+    gap: 60px; 
+}
+
+.pizza-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+
+    flex: 0 0 200px;   /* prevents shrinking */
+    width: 80px;
+
+    margin-right: 0;  /* remove this now */
+}
+
+.pizza-card:hover {
+    transform: scale(1.05);
+}
+
+.price {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.pizza-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.slide {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.slide::-webkit-scrollbar {
+    display: none;
+}
+
+
+.slide {
+    overflow-x: auto;
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* Internet Explorer */
+}
+
+/* =========================
+   Offers Section
+========================= */
+
+.offer-box {
+    background-color: #f3e6ff;
+    border-left: 6px solid #6a0dad;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 700px;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    background-color: #6a0dad;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* =========================
+   Tablet (768px and below)
+========================= */
+
+@media (max-width: 768px) {
+
+    .logo {
+        width: 65px;
+    }
+
+    .menu-container {
+        gap: 20px;
+    }
+
+    .pizza-card {
+        width: 45%;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+}
+
+/* =========================
+   Mobile (480px and below)
+========================= */
+
+@media (max-width: 480px) {
+
+    .header-container {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pizza-card {
+        width: 100%;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+}
